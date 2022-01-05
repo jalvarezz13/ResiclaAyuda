@@ -1,0 +1,654 @@
+/******************* Variables *********************/
+/*Colores ESI*/
+:root {
+  --azul-claro-esi: #0898d7;
+  --azul-oscuro-esi: #282b5e;
+  --color-fondo: #f0f8ff;
+}
+
+/* Cambiar fondo cabecera */
+#header .header-top {
+  background-color: white;
+}
+
+#header .header-nav {
+  background-color: var(--color-fondo);
+  border-bottom: none;
+}
+
+#header .header-nav .blockcart {
+  background-color: var(--color-fondo);
+}
+
+/* Cambiar fondo banner */
+#wrapper {
+  background: #f0f8ff;
+}
+
+/* Ampliar tamano logo */
+#header .logo {
+  width: auto;
+}
+
+.top-menu .sub-menu.collapse {
+  display: none;
+}
+
+/*Color carrito*/
+#header {
+  position: relative;
+  z-index: 999;
+  color: var(--azul-claro-esi);
+  background: #fff;
+  box-shadow: 0 2px 5px 0 rgb(0 0 0 / 11%);
+}
+
+#header .header-nav .cart-preview .shopping-cart {
+  color: var(--azul-claro-esi);
+  vertical-align: middle;
+}
+
+/*Color encabezado*/
+#header a {
+  color: var(--azul-claro-esi);
+}
+
+#header a:hover {
+  color: var(--azul-oscuro-esi);
+}
+
+/*Alinear componentes busqueda*/
+#header .header-top a[data-depth="0"] {
+  padding-left: 0px;
+  padding-right: 0px;
+}
+
+/*Pie de pagina*/
+#footer {
+  background-color: #2d3134;
+}
+
+/*Color titulos pie de pagina*/
+#block_myaccount_infos .myaccount-title a {
+  color: #fff;
+}
+
+.footer-container li a {
+  color: #fff;
+}
+
+.footer-container .h3,
+.footer-container .h4 {
+  color: #fff;
+}
+
+.links .collapse {
+  color: #fff;
+}
+
+/*Subrayado de categorias*/
+.dropdown-item {
+  display: block;
+  width: 100%;
+  padding: 3px;
+  clear: both;
+  font-weight: 400;
+  color: var(--azul-claro-esi);
+  text-align: center;
+  white-space: nowrap;
+  background: none;
+  border: 0;
+}
+
+#_desktop_top_menu a {
+  background-image: linear-gradient(currentColor, currentColor);
+  background-position: 50% 100%;
+  background-repeat: no-repeat;
+  background-size: 0% 2px;
+  transition: background-size 0.3s;
+  color: var(--azul-claro-esi) !important;
+}
+
+#_desktop_top_menu a:hover {
+  color: var(--azul-claro-esi) !important;
+  background-size: 100% 2px;
+}
+
+/*Cambiar padding entre categorias*/
+ul#top-menu li a {
+  position: relative;
+  font-weight: bold;
+  color: var(--azul-claro-esi);
+  margin: 0px 10px;
+}
+/*Categorias en mayusculas*/
+.top-menu[data-depth="0"] {
+  color: var(--azul-oscuro-esi);
+  text-transform: uppercase;
+  font-size: 0px;
+}
+
+/******************* Carrousel *********************/
+.carousel__body {
+  padding-bottom: 400px;
+  background: none;
+  text-align: center;
+  font-family: sans-serif;
+  color: #fefefe;
+}
+.carousel__container {
+  position: relative;
+  width: 320px;
+  margin: 100px auto 0 auto;
+  perspective: 1000px;
+}
+
+.carousel__1 {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  transform-style: preserve-3d;
+  animation: rotate360 60s infinite forwards linear;
+}
+.carousel__face {
+  position: absolute;
+  width: 300px;
+  height: 187px;
+  top: 20px;
+  left: 10px;
+  right: 10px;
+  background-size: cover;
+  box-shadow: inset 0 0 0 2000px rgba(0, 0, 0, 0.1);
+  display: flex;
+}
+
+.carousel__span {
+  margin: 155px auto auto auto;
+  font-size: 2.5rem;
+  font-weight: bold;
+  -webkit-text-stroke: 1px black;
+}
+
+.carousel__face:nth-child(1) {
+  background-image: url("/prestashop/img/cms/Curso_2122.jpg");
+  transform: rotateY(0deg) translateZ(430px);
+}
+.carousel__face:nth-child(2) {
+  background-image: url("/prestashop/img/cms/Grupo_Confianza.jpg");
+  transform: rotateY(40deg) translateZ(430px);
+}
+.carousel__face:nth-child(3) {
+  background-image: url("/prestashop/img/cms/Grupo_Empatia.jpg");
+  transform: rotateY(80deg) translateZ(430px);
+}
+.carousel__face:nth-child(4) {
+  background-image: url("/prestashop/img/cms/Grupo_Generosidad.jpg");
+  transform: rotateY(120deg) translateZ(430px);
+}
+.carousel__face:nth-child(5) {
+  background-image: url("/prestashop/img/cms/Grupo_Humildad.jpg");
+  transform: rotateY(160deg) translateZ(430px);
+}
+.carousel__face:nth-child(6) {
+  background-image: url("/prestashop/img/cms/Grupo_Paciencia.jpg");
+  transform: rotateY(200deg) translateZ(430px);
+}
+.carousel__face:nth-child(7) {
+  background-image: url("/prestashop/img/cms/Grupo_Honradez.jpg");
+  transform: rotateY(240deg) translateZ(430px);
+}
+.carousel__face:nth-child(8) {
+  background-image: url("/prestashop/img/cms/pepe.jpg");
+  transform: rotateY(280deg) translateZ(430px);
+}
+.carousel__face:nth-child(9) {
+  background-image: url("/prestashop/img/cms/esi.jpg");
+  transform: rotateY(320deg) translateZ(430px);
+}
+
+@keyframes rotate360 {
+  from {
+    transform: rotateY(0deg);
+  }
+  to {
+    transform: rotateY(-360deg);
+  }
+}
+
+/*Color de los enlaces de las categorÃƒÂ­as de Rastrillo solidario*/
+.block-categories a {
+  color: var(--azul-oscuro-esi);
+}
+
+.block-categories a:hover {
+  color: var(--azul-claro-esi);
+}
+
+.tabs .nav-tabs .nav-link.active {
+  color: var(--azul-claro-esi);
+  border: none;
+  border-bottom: var(--azul-claro-esi) 3px solid;
+}
+
+/*Cambio de color de Rastrillo Solidario*/
+.block-categories .h6 {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--azul-oscuro-esi);
+}
+
+/*Fondo texto*/
+.page-content.page-cms {
+  padding: 1.25rem;
+  text-align: justify;
+  background: #f0f8ff;
+}
+
+/*Color texto*/
+p,
+.page-content.page-cms ul {
+  font-size: 1rem;
+  font-weight: 400;
+  color: #000000;
+}
+
+/*EliminaciÃƒÂ³n de las subcategorias de rastrillo solidario*/
+#subcategories {
+  margin-bottom: 20px;
+  border-top: 1px solid #f6f6f6;
+  display: none;
+}
+
+/*Contorno de los productos*/
+#products .thumbnail-container,
+.featured-products .thumbnail-container,
+.product-accessories .thumbnail-container,
+.product-miniature .thumbnail-container {
+  position: relative;
+  width: 250px;
+  height: auto;
+  margin-bottom: 1.563rem;
+  overflow: hidden;
+  background: #fff;
+  box-shadow: 0 0 10px rgb(11 200 247 / 64%);
+}
+
+/*Categoria novedades*/
+#products .products,
+.featured-products .products,
+.product-accessories .products,
+.product-miniature .products {
+  justify-content: center;
+}
+
+/* Imagenes en la categoria Que ha pasado */
+.image-pagina {
+  width: calc(100% - 30%);
+}
+
+.image-pagina-small {
+  width: calc(100% - 60%);
+}
+
+/*Colores productos*/
+.btn-primary {
+  color: #fff;
+  background-color: var(--azul-claro-esi);
+  border-color: rgba(0, 0, 0, 0);
+}
+
+.btn-primary:hover {
+  background-color: var(--azul-oscuro-esi);
+}
+
+.product-price {
+  display: inline-block;
+  color: var(--azul-claro-esi);
+}
+
+/* Rastrillo solidario */
+.block-categories {
+  background: none;
+}
+
+/* Preguntas frecuentes */
+.etiqueta-preguntas {
+  font-size: 32px;
+  color: black;
+}
+
+/* Logos colaboradores */
+#custom-text {
+  display: flex;
+  flex-direction: column;
+  background-color: var(--color-fondo);
+}
+
+.colaboradores {
+  padding: 10px 0 10px 0 !important;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  background-color: var(--color-fondo);
+}
+
+.imagen-box {
+  width: 203px;
+  height: 161px;
+  padding-top: 20px;
+}
+
+/* BREADCRUMB */
+
+#wrapper .breadcrumb li a:hover {
+  text-decoration: underline;
+}
+
+#wrapper .breadcrumb {
+  overflow: hidden;
+  width: 100%;
+}
+
+#wrapper .breadcrumb li {
+  float: left;
+  margin: 0 0.3em 0 0em;
+}
+
+#wrapper .breadcrumb a {
+  background: #232323;
+  padding: 0.3em;
+  float: left;
+  text-decoration: none;
+  color: #232323;
+  position: relative;
+}
+
+#wrapper .breadcrumb li a {
+  color: white;
+  padding-left: 10px;
+}
+
+#wrapper .breadcrumb a::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  margin-top: -1.5em;
+  border-width: 1.5em 0 1.5em 1em;
+  border-style: solid;
+  border-color: #232323 #232323 #232323 transparent;
+  left: -1em;
+}
+
+#wrapper .breadcrumb a::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  margin-top: -1.5em;
+  border-top: 1.5em solid transparent;
+  border-bottom: 1.5em solid transparent;
+  border-left: 1em solid #232323;
+  right: -1em;
+}
+
+#wrapper .breadcrumb li::after {
+  content: "";
+  margin: 0.5rem;
+}
+
+#wrapper .breadcrumb li:last-child a::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  margin-top: -1.5em;
+  border-top: 1.5em solid transparent;
+  border-bottom: 1.5em solid transparent;
+  border-left: 1em solid #00b2fd;
+  right: -1em;
+}
+
+#wrapper .breadcrumb li:last-child a::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  margin-top: -1.5em;
+  border-width: 1.5em 0 1.5em 1em;
+  border-style: solid;
+  border-color: #00b2fd #00b2fd #00b2fd transparent;
+  left: -1em;
+}
+
+#wrapper .breadcrumb li:last-child a {
+  background: #00b2fd;
+  color: white;
+}
+
+/*PREGUNTAS FRECUENTES*/
+
+#accordion-container {
+  font-size: 13px;
+  padding: 5px 10px 10px 10px;
+}
+
+.accordion-header {
+  font-size: 16px;
+  background: #ebebeb;
+  margin: 5px 0 0 0;
+  padding: 5px 20px;
+  border: 1px solid #cccccc;
+  cursor: pointer;
+  color: #666666;
+  -moz-border-radius: 5px;
+  -webkit-border-radius: 5px;
+  border-radius: 5px;
+}
+
+.active-header {
+  -moz-border-radius: 5px 5px 0 0;
+  -webkit-border-radius: 5px 5px 0 0;
+  border-radius: 5px 5px 0 0;
+  background: url(images/active-header.gif) var(--azul-claro-esi);
+  color: #ffffff;
+  background-repeat: no-repeat;
+  background-position: right 50%;
+}
+
+.active-header:hover {
+  background: url(images/active-header.gif) var(--azul-oscuro-esi);
+  background-repeat: no-repeat;
+  background-position: right 50%;
+}
+
+.inactive-header {
+  background: url(images/inactive-header.gif) #ebebeb;
+  background-repeat: no-repeat;
+  background-position: right 50%;
+}
+
+.inactive-header:hover {
+  background: url(images/inactive-header.gif) #f5f5f5;
+  background-repeat: no-repeat;
+  background-position: right 50%;
+}
+
+.accordion-content {
+  display: none;
+  padding: 20px;
+  background: #ffffff;
+  border: 1px solid #cccccc;
+  border-top: 0;
+  -moz-border-radius: 0 0 5px 5px;
+  -webkit-border-radius: 0 0 5px 5px;
+  border-radius: 0 0 5px 5px;
+}
+
+/* Novedades */
+#products .products,
+.featured-products .products,
+.product-accessories .products,
+.product-miniature .products {
+  justify-content: center;
+  content: "Nuevas donaciones.";
+}
+
+/* CONTACT FORM */
+
+.contact-form {
+  background: #f0f8ff;
+}
+
+/* Formato cabecera en dispositivos moviles */
+@media (max-width: 767px) {
+  #header .header-top {
+    display: none;
+  }
+  #header .header-nav {
+    background: white;
+  }
+  #header .header-nav .blockcart {
+    background-color: white;
+  }
+  .img-sub-categoria {
+    width: 300px;
+  }
+}
+
+/* Bloque de categorias formato */
+.block-categories .category-sub-menu li[data-depth="0"] > a {
+  border-bottom: solid;
+  border-bottom-style: inset;
+  padding-top: 5px;
+  text-transform: uppercase;
+  border-bottom-width: medium;
+  border-bottom-color: var(--azul-oscuro-esi);
+}
+
+.block-categories {
+  background: white !important;
+}
+
+/* Justificar el texto */
+p {
+  text-align: justify;
+}
+
+/* iframe */
+.iframe {
+  width: 100px;
+  height: 50px;
+}
+
+@media (min-width: 320px) {
+  .iframe {
+    width: 200px;
+    height: 150px;
+  }
+}
+
+/* CSS pantalla 768px o superior */
+@media (min-width: 768px) {
+  .iframe {
+    width: 500px;
+    height: 350px;
+  }
+}
+
+.container_yt {
+  text-align: center;
+}
+
+/*Sub categorias*/
+.flex-center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.btn-sub-categorias {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.img-sub-categoria {
+  -webkit-transition: all 0.9s ease;
+  /* Safari y Chrome */
+  -moz-transition: all 0.9s ease;
+  /* Firefox */
+  -o-transition: all 0.9s ease;
+  /* IE 9 */
+  -ms-transition: all 0.9s ease;
+  /* Opera */
+  width: 350px;
+  margin: 5px 20px;
+}
+
+.img-sub-categoria:hover {
+  -webkit-transform: scale(1.25);
+  -moz-transform: scale(1.25);
+  -ms-transform: scale(1.25);
+  -o-transform: scale(1.25);
+  transform: scale(1.25);
+}
+
+/* Subcategorias formato movil */
+@media (max-width: 767px) {
+  .img-sub-categoria {
+    width: 300px;
+  }
+}
+
+/* Titulos pagina */
+.page-header h1 {
+  margin-bottom: -20px;
+  margin-top: 10px;
+  font-size: 2rem;
+  text-align: center;
+  color: var(--azul-oscuro-esi);
+}
+
+/* Color de las categorias */
+#header .header-top a[data-depth="0"] {
+  color: var(--azul-oscuro-esi) !important;
+}
+
+#header .top-menu a[data-depth="0"]:hover {
+  color: var(--azul-claro-esi) !important;
+}
+
+/* FOOTER */
+
+@media (max-width: 767px) {
+  .texto-sobre-nosotros {
+    padding-bottom: 20px;
+  }
+}
+
+.footer-texto {
+  font-size: 12pt;
+  font-family: sans-serif;
+  font-style: italic;
+  color: white;
+}
+
+.footer-links {
+  color: var(--azul-claro-esi);
+}
+
+.footer-links:hover {
+  color: white;
+  text-decoration: underline;
+}
+
+.footer-correo {
+  color: var(--azul-claro-esi);
+  font-style: italic;
+}
+
+.footer-correo:hover {
+  color: white;
+  text-decoration: underline;
+  font-style: italic;
+}
